@@ -12,7 +12,7 @@ proxy=false                                        # Set the proxy to true or fa
 ###########################################
 ## Check if we have a public IP
 ###########################################
-ip=$(curl -s https://api.ipify.org || curl -s https://ipv4.icanhazip.com/)
+ip=$(curl -s https://api.ipify.org || curl -s https://ipv4.icanhazip.com/ || curl -s https://checkip.amazonaws.com)
 
 if [ "${ip}" == "" ]; then 
   logger -s "DDNS Updater: No public IP found"
